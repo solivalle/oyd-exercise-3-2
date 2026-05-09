@@ -1,0 +1,10 @@
+sergio@Sergios-MacBook-Pro infra % aws lambda get-function \
+ --function-name lambda-dev \          
+ --query '{FunctionArn:Configuration.FunctionArn,State:Configuration.State,Arch:Configuration.Architectures}'
+{
+    "FunctionArn": "arn:aws:lambda:us-west-2:245261108553:function:lambda-dev",
+    "State": "Active",
+    "Arch": [
+        "arm64"
+    ]
+}
