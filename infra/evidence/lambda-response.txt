@@ -1,0 +1,7 @@
+sergio@Sergios-MacBook-Pro infra % echo $INVOKE_URL
+https://1aw2qmkzd3.execute-api.us-west-2.amazonaws.com/
+sergio@Sergios-MacBook-Pro infra % curl ${INVOKE_URL}/rates
+{"rates":{"USD":1,"EUR":0.92,"GBP":0.79,"JPY":149.5,"GTQ":7.78}}%
+sergio@Sergios-MacBook-Pro infra % curl ${INVOKE_URL}/convert -H 'Content-Type: application/json' -d '{"from":"US
+D","to":"GTQ","amount":100}'
+{"from":"USD","to":"GTQ","amount":100,"result":778}%  
