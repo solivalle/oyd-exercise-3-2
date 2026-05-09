@@ -70,7 +70,7 @@ jobs:
         working-directory: infra
 
       - name: Terraform Plan
-        run: terraform plan -var-file=envs/dev/dev.tfvars -no-color 2>&1 | tee infra/plan.txt
+        run: terraform plan -var-file=envs/dev.tfvars -no-color 2>&1 | tee plan.txt
         working-directory: infra
 
       - name: Post plan as PR comment
